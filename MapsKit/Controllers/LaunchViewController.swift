@@ -7,15 +7,15 @@
 
 import UIKit
 
-class Launch: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+class LaunchViewController: UIViewController {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         if UserDefaults.standard.bool(forKey: "isLogin") {
-                   performSegue(withIdentifier: "toMain", sender: self)
-               } else {
-                   performSegue(withIdentifier: "toMain", sender: self)
-               }
+            performSegue(withIdentifier: "toMain", sender: self)
+        } else {
+            performSegue(withIdentifier: "toAuth", sender: self)
+        }
     }
-
+    
 }

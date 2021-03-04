@@ -32,7 +32,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Логин" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJ5-MK-Jzx">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJ5-MK-Jzx">
                                 <rect key="frame" x="107" y="208" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="KWk-hJ-nbU"/>
@@ -40,45 +40,64 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Пароль" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGS-zL-NgE">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGS-zL-NgE">
                                 <rect key="frame" x="107" y="267" width="200" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVe-6f-1R9">
-                                <rect key="frame" x="107" y="401" width="200" height="30"/>
+                                <rect key="frame" x="107" y="401" width="200" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Войти"/>
                                 <connections>
                                     <action selector="login:" destination="z7a-QV-2WS" eventType="touchUpInside" id="dAo-hD-wfz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Og0-m3-TfD">
-                                <rect key="frame" x="107" y="456" width="200" height="30"/>
-                                <state key="normal" title="Восстановить пароль"/>
+                                <rect key="frame" x="157" y="306" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Rn6-53-zeG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Забыли пароль?"/>
+                                <connections>
+                                    <action selector="recovery:" destination="z7a-QV-2WS" eventType="touchUpInside" id="PEG-Td-Ehj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2q-9g-3xb">
+                                <rect key="frame" x="107" y="512" width="200" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Регистрация"/>
+                                <connections>
+                                    <action selector="registration:" destination="z7a-QV-2WS" eventType="touchUpInside" id="5kt-Aw-sMW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F3T-nw-j8Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LVe-6f-1R9" firstAttribute="width" secondItem="MGS-zL-NgE" secondAttribute="width" id="3Mo-zH-Rxk"/>
-                            <constraint firstItem="Og0-m3-TfD" firstAttribute="top" secondItem="LVe-6f-1R9" secondAttribute="bottom" constant="25" id="6HX-tg-giJ"/>
                             <constraint firstItem="LVe-6f-1R9" firstAttribute="top" secondItem="MGS-zL-NgE" secondAttribute="bottom" constant="100" id="7FH-AL-DuA"/>
                             <constraint firstItem="LVe-6f-1R9" firstAttribute="centerX" secondItem="MGS-zL-NgE" secondAttribute="centerX" id="8DS-aj-Xbe"/>
                             <constraint firstItem="MGS-zL-NgE" firstAttribute="top" secondItem="XJ5-MK-Jzx" secondAttribute="bottom" constant="25" id="BPX-Pa-Ehm"/>
-                            <constraint firstItem="Og0-m3-TfD" firstAttribute="centerX" secondItem="LVe-6f-1R9" secondAttribute="centerX" id="YHy-fs-kGn"/>
+                            <constraint firstItem="Og0-m3-TfD" firstAttribute="top" secondItem="MGS-zL-NgE" secondAttribute="bottom" constant="5" id="EmB-0u-PVh"/>
+                            <constraint firstItem="Og0-m3-TfD" firstAttribute="trailing" secondItem="MGS-zL-NgE" secondAttribute="trailing" id="Fma-Uv-m3p"/>
+                            <constraint firstItem="t2q-9g-3xb" firstAttribute="centerX" secondItem="LVe-6f-1R9" secondAttribute="centerX" id="Vrx-7L-lVu"/>
                             <constraint firstItem="XJ5-MK-Jzx" firstAttribute="top" secondItem="F3T-nw-j8Z" secondAttribute="top" constant="120" id="cGb-xW-0EV"/>
+                            <constraint firstItem="t2q-9g-3xb" firstAttribute="width" secondItem="LVe-6f-1R9" secondAttribute="width" id="eWI-BQ-pUh"/>
                             <constraint firstItem="MGS-zL-NgE" firstAttribute="width" secondItem="XJ5-MK-Jzx" secondAttribute="width" multiplier="1:1" id="exV-aB-61A"/>
-                            <constraint firstItem="Og0-m3-TfD" firstAttribute="width" secondItem="LVe-6f-1R9" secondAttribute="width" id="iwH-2C-MgX"/>
                             <constraint firstItem="MGS-zL-NgE" firstAttribute="centerX" secondItem="XJ5-MK-Jzx" secondAttribute="centerX" id="oU2-o1-YEY"/>
                             <constraint firstItem="XJ5-MK-Jzx" firstAttribute="centerX" secondItem="qas-Yh-zcY" secondAttribute="centerX" id="r73-i3-NkF"/>
+                            <constraint firstItem="t2q-9g-3xb" firstAttribute="top" secondItem="LVe-6f-1R9" secondAttribute="bottom" constant="75" id="zg9-0R-NzL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u0m-zp-dPb"/>
                     <connections>
-                        <outlet property="loginView" destination="XJ5-MK-Jzx" id="NXv-WH-8Ha"/>
-                        <outlet property="passwordView" destination="MGS-zL-NgE" id="Vmk-Kl-Ejn"/>
+                        <outlet property="loginTextField" destination="XJ5-MK-Jzx" id="h83-2W-QoT"/>
+                        <outlet property="passwordTextField" destination="MGS-zL-NgE" id="D3p-sS-iRf"/>
                         <segue destination="Mcl-Ve-xMy" kind="show" identifier="onRecover" id="Gz5-70-cLA"/>
                         <segue destination="8ef-6W-Tes" kind="presentation" identifier="toMain" id="3IT-wJ-STr"/>
+                        <segue destination="T7B-bE-K1y" kind="show" identifier="toRegistration" id="qqQ-Uf-EcG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atc-q0-gUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -101,7 +120,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Логин" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FCJ-47-S48">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FCJ-47-S48">
                                 <rect key="frame" x="107" y="208" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="EDv-Ky-a3u"/>
@@ -113,7 +132,7 @@
                                 <rect key="frame" x="107" y="267" width="200" height="30"/>
                                 <state key="normal" title="Восстановить пароль"/>
                                 <connections>
-                                    <action selector="recovery:" destination="Mcl-Ve-xMy" eventType="touchUpInside" id="RcL-HF-ebL"/>
+                                    <action selector="recovery:" destination="Mcl-Ve-xMy" eventType="touchUpInside" id="QOy-1g-S64"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -129,14 +148,70 @@
                     </view>
                     <navigationItem key="navigationItem" id="m5b-eZ-RZ2"/>
                     <connections>
-                        <outlet property="loginView" destination="FCJ-47-S48" id="xm9-jj-oec"/>
+                        <outlet property="login" destination="FCJ-47-S48" id="GwU-oG-0cG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdL-38-NWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568" y="482"/>
+            <point key="canvasLocation" x="586" y="167"/>
+        </scene>
+        <!--Registration View Controller-->
+        <scene sceneID="aV0-8P-WZz">
+            <objects>
+                <viewController id="T7B-bE-K1y" customClass="RegistrationViewController" customModule="MapsKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QmX-Re-XmC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите новый логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ApB-x4-ywA">
+                                <rect key="frame" x="107" y="208" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Q3O-Bf-zhY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите новый пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V31-fh-atL">
+                                <rect key="frame" x="107" y="267" width="200" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGL-UT-jKx">
+                                <rect key="frame" x="107" y="421" width="200" height="30"/>
+                                <state key="normal" title="Создать новый аккаунт"/>
+                                <connections>
+                                    <action selector="createNewAccaunt:" destination="T7B-bE-K1y" eventType="touchUpInside" id="f26-N5-xoP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lD3-G3-q36"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ApB-x4-ywA" firstAttribute="top" secondItem="lD3-G3-q36" secondAttribute="top" constant="120" id="Ayo-N9-Psq"/>
+                            <constraint firstItem="V31-fh-atL" firstAttribute="centerX" secondItem="ApB-x4-ywA" secondAttribute="centerX" id="cmY-fT-UN2"/>
+                            <constraint firstItem="TGL-UT-jKx" firstAttribute="centerX" secondItem="V31-fh-atL" secondAttribute="centerX" id="gRO-fk-0iW"/>
+                            <constraint firstItem="TGL-UT-jKx" firstAttribute="top" secondItem="V31-fh-atL" secondAttribute="bottom" constant="120" id="lFG-wp-jxe"/>
+                            <constraint firstItem="ApB-x4-ywA" firstAttribute="centerX" secondItem="QmX-Re-XmC" secondAttribute="centerX" id="nPd-XS-gP8"/>
+                            <constraint firstItem="TGL-UT-jKx" firstAttribute="width" secondItem="V31-fh-atL" secondAttribute="width" id="qL8-ei-Gdy"/>
+                            <constraint firstItem="V31-fh-atL" firstAttribute="top" secondItem="ApB-x4-ywA" secondAttribute="bottom" constant="25" id="sS9-zE-2Ac"/>
+                            <constraint firstItem="V31-fh-atL" firstAttribute="width" secondItem="ApB-x4-ywA" secondAttribute="width" id="tYr-jn-tUG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IfB-xJ-jY9"/>
+                    <connections>
+                        <outlet property="loginTextField" destination="ApB-x4-ywA" id="of8-8B-uXc"/>
+                        <outlet property="passwordTextField" destination="V31-fh-atL" id="LtU-HD-Bgk"/>
+                        <segue destination="8ef-6W-Tes" kind="presentation" identifier="toMain" customClass="RootSegue" customModule="MapsKit" customModuleProvider="target" id="eni-yq-efi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61B-HA-o5a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326" y="995"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eni-yq-efi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

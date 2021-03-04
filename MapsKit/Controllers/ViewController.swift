@@ -8,7 +8,6 @@
 import UIKit
 import GoogleMaps
 import CoreLocation
-import RealmSwift
 
 class ViewController: UIViewController {
    
@@ -19,6 +18,8 @@ class ViewController: UIViewController {
     var route: GMSPolyline?
     // Ячейка для хранения объекта пути:
     var routePath: GMSMutablePath?
+    // Ячейка для хранения объекта БД:
+    let dataBase = PathRepository()
 
     @IBOutlet weak var mapView: GMSMapView!
     
@@ -82,35 +83,27 @@ class ViewController: UIViewController {
         locationManager?.stopUpdatingLocation()
         // locationManager?.requestLocation()
         // Удалить предыдущий маршрут из Realm.
-        do {
-            let realm = try Realm()
-            try realm.write {
-                realm.deleteAll()
-            }
-        } catch {
-            print(error)
-        }
-        addLastRoute()
+        dataBase.clearDB()
+        // Добавить маршрут в БД:
+        guard let routePath = routePath else {return}
+        dataBase.addLastRoute(routePath:routePath)
     }
     
     @IBAction func lastRouteLocation(_ sender: Any) {
         lastRoute()
     }
-    
     // метод добавления линии пути:
     func addLine() {
-        // Отвязываем от карты старую линию
-     //   route?.map = nil
         // Заменяем старую линию новой
         route = GMSPolyline()
-        // цвет объекта пути:
-        route?.strokeColor = .red
-        // ширина объекта пути:
-        route?.strokeWidth = 7
         // Заменяем старый путь новым, пока пустым (без точек)
         routePath = GMSMutablePath()
         // Добавляем новую линию на карту
         route?.map = mapView
+        // цвет объекта пути:
+        route?.strokeColor = .red
+        // ширина объекта пути:
+        route?.strokeWidth = 7
     }
     // метод добавления маркера:
     func addMarker(position: CLLocationCoordinate2D) {
@@ -125,45 +118,21 @@ class ViewController: UIViewController {
         marker?.map = nil
         marker = nil
     }
-    // Сохранение маршрута в Realm.
-    func addLastRoute() {
-        let lastRoute = LastRoute()
-        // Обработка исключений при работе с хранилищем.
-        do {
-            // Получаем доступ к хранилищу.
-            let config = Realm.Configuration(deleteRealmIfMigrationNeeded:false)
-            let realm = try Realm(configuration: config)
-            // Путь к хранилищу.
-            print(Realm.Configuration.defaultConfiguration.fileURL!)
-            
-            // Начинаем изменять хранилище.
-            realm.beginWrite()
-           // realm.deleteAll()
-            guard let routePath = routePath else { return }
-            // Цикл по всем точкам (координатам) маршрута.
-            for i in 0..<routePath.count() {
-                let currentCoordinate = routePath.coordinate(at: i)
-                lastRoute.latitude = currentCoordinate.latitude
-                lastRoute.longitude = currentCoordinate.longitude
-                // Кладем все объекты класса CLLocation в хранилище.
-                realm.add(lastRoute)
-            }
-            // Завершаем изменения хранилища.
-            try realm.commitWrite()
-        } catch {
-            // Если произошла ошибка, выводим ее в консоль.
-            print(error)
-        }
-    }
-    // Показ предыдущего маршрута.
+    // метод построения предыдущего маршрута.
     func lastRoute() {
-        
-        // Получаем доступ к хранилищу.
-        let realm = try! Realm()
-        let lastRoute: Results<LastRoute> = { realm.objects(LastRoute.self) }()
+        // Получаем путь из хранилища:
+        let lastRoute = try! dataBase.getPathData()
         // Проверка, что координаты есть в памяти.
         guard !lastRoute.isEmpty else { return }
-        addLine()
+        // Заменяем старую линию новой.
+        route = GMSPolyline()
+        // Заменяем старый путь новым, пока пустым (без точек).
+        routePath = GMSMutablePath()
+        // Добавляем новую линию на карту.
+        route?.map = mapView
+        // Цвет и ширина линии маршрута.
+        route?.strokeWidth = 5
+        route?.strokeColor = .systemRed
         // Создание линии маршрута путём перебора всех координат.
         for coordinates in lastRoute {
             routePath?.add(CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude))
@@ -180,6 +149,10 @@ class ViewController: UIViewController {
         mapView.camera = camera
         // Немного отодвинуть камеру, чтобы был зазор между краями экрана и крайними точками линии маршрута.
         mapView.moveCamera(GMSCameraUpdate.zoomOut())
+     //   let update = GMSCameraUpdate.fit(bounds, withPadding: 50.0)
+     //   mapView.moveCamera(update)
+        
+        
     }
 }
 
