@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KWO-Gy-nY6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="TsX-OB-KDE">
+            <objects>
+                <navigationController id="KWO-Gy-nY6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rAf-IV-hV8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="z7a-QV-2WS" kind="relationship" relationship="rootViewController" id="NEA-ke-O0i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UEz-Te-WoO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1168" y="167"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="sCS-Vn-vyw">
+            <objects>
+                <viewController id="z7a-QV-2WS" customClass="LoginViewController" customModule="MapsKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qas-Yh-zcY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Логин" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJ5-MK-Jzx">
+                                <rect key="frame" x="107" y="208" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KWk-hJ-nbU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Пароль" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGS-zL-NgE">
+                                <rect key="frame" x="107" y="267" width="200" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVe-6f-1R9">
+                                <rect key="frame" x="107" y="401" width="200" height="30"/>
+                                <state key="normal" title="Войти"/>
+                                <connections>
+                                    <action selector="login:" destination="z7a-QV-2WS" eventType="touchUpInside" id="dAo-hD-wfz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Og0-m3-TfD">
+                                <rect key="frame" x="107" y="456" width="200" height="30"/>
+                                <state key="normal" title="Восстановить пароль"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F3T-nw-j8Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LVe-6f-1R9" firstAttribute="width" secondItem="MGS-zL-NgE" secondAttribute="width" id="3Mo-zH-Rxk"/>
+                            <constraint firstItem="Og0-m3-TfD" firstAttribute="top" secondItem="LVe-6f-1R9" secondAttribute="bottom" constant="25" id="6HX-tg-giJ"/>
+                            <constraint firstItem="LVe-6f-1R9" firstAttribute="top" secondItem="MGS-zL-NgE" secondAttribute="bottom" constant="100" id="7FH-AL-DuA"/>
+                            <constraint firstItem="LVe-6f-1R9" firstAttribute="centerX" secondItem="MGS-zL-NgE" secondAttribute="centerX" id="8DS-aj-Xbe"/>
+                            <constraint firstItem="MGS-zL-NgE" firstAttribute="top" secondItem="XJ5-MK-Jzx" secondAttribute="bottom" constant="25" id="BPX-Pa-Ehm"/>
+                            <constraint firstItem="Og0-m3-TfD" firstAttribute="centerX" secondItem="LVe-6f-1R9" secondAttribute="centerX" id="YHy-fs-kGn"/>
+                            <constraint firstItem="XJ5-MK-Jzx" firstAttribute="top" secondItem="F3T-nw-j8Z" secondAttribute="top" constant="120" id="cGb-xW-0EV"/>
+                            <constraint firstItem="MGS-zL-NgE" firstAttribute="width" secondItem="XJ5-MK-Jzx" secondAttribute="width" multiplier="1:1" id="exV-aB-61A"/>
+                            <constraint firstItem="Og0-m3-TfD" firstAttribute="width" secondItem="LVe-6f-1R9" secondAttribute="width" id="iwH-2C-MgX"/>
+                            <constraint firstItem="MGS-zL-NgE" firstAttribute="centerX" secondItem="XJ5-MK-Jzx" secondAttribute="centerX" id="oU2-o1-YEY"/>
+                            <constraint firstItem="XJ5-MK-Jzx" firstAttribute="centerX" secondItem="qas-Yh-zcY" secondAttribute="centerX" id="r73-i3-NkF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="u0m-zp-dPb"/>
+                    <connections>
+                        <outlet property="loginView" destination="XJ5-MK-Jzx" id="NXv-WH-8Ha"/>
+                        <outlet property="passwordView" destination="MGS-zL-NgE" id="Vmk-Kl-Ejn"/>
+                        <segue destination="Mcl-Ve-xMy" kind="show" identifier="onRecover" id="Gz5-70-cLA"/>
+                        <segue destination="8ef-6W-Tes" kind="presentation" identifier="toMain" id="3IT-wJ-STr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atc-q0-gUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-325" y="167"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Lb9-W0-ViH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="8ef-6W-Tes" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8h-3Q-gkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195" y="-461"/>
+        </scene>
+        <!--Recovery Password View Controller-->
+        <scene sceneID="oeh-H4-rSC">
+            <objects>
+                <viewController id="Mcl-Ve-xMy" customClass="RecoveryPasswordViewController" customModule="MapsKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fb7-qb-5zc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Логин" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FCJ-47-S48">
+                                <rect key="frame" x="107" y="208" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="EDv-Ky-a3u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpd-6X-piA">
+                                <rect key="frame" x="107" y="267" width="200" height="30"/>
+                                <state key="normal" title="Восстановить пароль"/>
+                                <connections>
+                                    <action selector="recovery:" destination="Mcl-Ve-xMy" eventType="touchUpInside" id="RcL-HF-ebL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HVZ-x1-w0h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FCJ-47-S48" firstAttribute="top" secondItem="HVZ-x1-w0h" secondAttribute="top" constant="120" id="5S8-te-w6z"/>
+                            <constraint firstItem="FCJ-47-S48" firstAttribute="centerX" secondItem="Fb7-qb-5zc" secondAttribute="centerX" id="8sP-tR-IVC"/>
+                            <constraint firstItem="Wpd-6X-piA" firstAttribute="width" secondItem="FCJ-47-S48" secondAttribute="width" id="R3k-OA-Ezs"/>
+                            <constraint firstItem="Wpd-6X-piA" firstAttribute="centerX" secondItem="FCJ-47-S48" secondAttribute="centerX" id="lyW-eA-aVR"/>
+                            <constraint firstItem="Wpd-6X-piA" firstAttribute="top" secondItem="FCJ-47-S48" secondAttribute="bottom" constant="25" id="tDn-eP-VYx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="m5b-eZ-RZ2"/>
+                    <connections>
+                        <outlet property="loginView" destination="FCJ-47-S48" id="xm9-jj-oec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdL-38-NWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="568" y="482"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
