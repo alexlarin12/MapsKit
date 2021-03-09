@@ -25,6 +25,14 @@
             </objects>
             <point key="canvasLocation" x="-1657" y="94"/>
         </scene>
+        <!--Launch-->
+        <scene sceneID="St0-v0-v7x">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Launch" id="jpd-LL-uiC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2AA-c6-O2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-255" y="-345"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="Y1p-hQ-06F">
             <objects>
@@ -36,7 +44,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQe-SB-spf">
                                 <rect key="frame" x="107" y="208" width="200" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="1ZC-YC-AjX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="1ZC-YC-AjX"/>
                                 </constraints>
                                 <state key="normal" title="Показать карту"/>
                                 <connections>
@@ -47,8 +55,7 @@
                                 <rect key="frame" x="107" y="263" width="200" height="30"/>
                                 <state key="normal" title="Выйти"/>
                                 <connections>
-                                    <action selector="logout:" destination="FBY-UG-79d" eventType="touchUpInside" id="145-eN-Jd8"/>
-                                    <segue destination="gap-1u-Is7" kind="unwind" identifier="toLogin" unwindAction="logout:" id="Yl4-LQ-gYK"/>
+                                    <action selector="logout:" destination="FBY-UG-79d" eventType="touchUpInside" id="RJO-TL-KlS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,10 +72,10 @@
                     <navigationItem key="navigationItem" id="gal-cD-1iB"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toMap" id="Udv-nQ-J5g"/>
+                        <segue destination="jpd-LL-uiC" kind="custom" identifier="toLaunch" customClass="RootSegue" customModule="MapsKit" customModuleProvider="target" id="a3M-pO-bOv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87p-2i-SNJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="gap-1u-Is7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-775" y="94"/>
         </scene>

@@ -8,5 +8,8 @@
 import UIKit
 
 class RootSegue: UIStoryboardSegue {
-
+    override func perform() {
+        UIApplication.shared.windows.filter{$0.isKeyWindow}.first?.rootViewController = destination
+        
+    }
 }

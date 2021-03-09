@@ -17,6 +17,18 @@
 		439F8B7F25E27DB400939DEA /* MapsKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439F8B7E25E27DB400939DEA /* MapsKitTests.swift */; };
 		439F8B8A25E27DB400939DEA /* MapsKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439F8B8925E27DB400939DEA /* MapsKitUITests.swift */; };
 		439F8B9B25E27DE600939DEA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 439F8B9A25E27DE600939DEA /* .gitignore */; };
+		439F8C2125E4225A00939DEA /* LastRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439F8C2025E4225A00939DEA /* LastRoute.swift */; };
+		439F8D0725ECF0E000939DEA /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439F8D0625ECF0E000939DEA /* Auth.storyboard */; };
+		439F8D0C25ECF6EC00939DEA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439F8D0B25ECF6EC00939DEA /* LoginViewController.swift */; };
+		439F8D1125ECF7B900939DEA /* RecoveryPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439F8D1025ECF7B900939DEA /* RecoveryPasswordViewController.swift */; };
+		439F8D1E25ED00B200939DEA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439F8D1D25ED00B200939DEA /* MainViewController.swift */; };
+		439F8D2825ED136300939DEA /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439F8D2725ED136300939DEA /* Launch.storyboard */; };
+		439F8D2D25ED14B500939DEA /* RootSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439F8D2C25ED14B500939DEA /* RootSegue.swift */; };
+		439F8D3225ED152B00939DEA /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439F8D3125ED152B00939DEA /* LaunchViewController.swift */; };
+		439F8D4F25ED89FE00939DEA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439F8D4E25ED89FE00939DEA /* RegistrationViewController.swift */; };
+		439F8D5425ED8E3400939DEA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439F8D5325ED8E3400939DEA /* User.swift */; };
+		439F8D6125F0D0F500939DEA /* PathRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439F8D6025F0D0F500939DEA /* PathRepository.swift */; };
+		439F8D6C25F11F3800939DEA /* UserRepositiry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439F8D6B25F11F3800939DEA /* UserRepositiry.swift */; };
 		C9E1826BB6418DA9C87FF35B /* Pods_MapsKit_MapsKitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E16169CE7D366527A865BF /* Pods_MapsKit_MapsKitUITests.framework */; };
 		EDAEAF3B6C6B32C6A27D34A2 /* Pods_MapsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF978D3278B266D8045C8FC /* Pods_MapsKit.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +67,18 @@
 		439F8B8925E27DB400939DEA /* MapsKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsKitUITests.swift; sourceTree = "<group>"; };
 		439F8B8B25E27DB400939DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439F8B9A25E27DE600939DEA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		439F8C2025E4225A00939DEA /* LastRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastRoute.swift; sourceTree = "<group>"; };
+		439F8D0625ECF0E000939DEA /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		439F8D0B25ECF6EC00939DEA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		439F8D1025ECF7B900939DEA /* RecoveryPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordViewController.swift; sourceTree = "<group>"; };
+		439F8D1D25ED00B200939DEA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		439F8D2725ED136300939DEA /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		439F8D2C25ED14B500939DEA /* RootSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootSegue.swift; sourceTree = "<group>"; };
+		439F8D3125ED152B00939DEA /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		439F8D4E25ED89FE00939DEA /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		439F8D5325ED8E3400939DEA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		439F8D6025F0D0F500939DEA /* PathRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathRepository.swift; sourceTree = "<group>"; };
+		439F8D6B25F11F3800939DEA /* UserRepositiry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositiry.swift; sourceTree = "<group>"; };
 		4B1D1D6DE8468C52B533D822 /* Pods_MapsKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapsKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF978D3278B266D8045C8FC /* Pods_MapsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7A11C8FBF9CD9DD5439448 /* Pods-MapsKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapsKitTests.debug.xcconfig"; path = "Target Support Files/Pods-MapsKitTests/Pods-MapsKitTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,13 +143,14 @@
 		439F8B6625E27DB300939DEA /* MapsKit */ = {
 			isa = PBXGroup;
 			children = (
+				439F8D2325ED108C00939DEA /* Controllers */,
+				439F8D2225ED107100939DEA /* Storyboards */,
+				439F8C1F25E4223400939DEA /* DataBase */,
 				439F8B6725E27DB300939DEA /* AppDelegate.swift */,
 				439F8B6925E27DB300939DEA /* SceneDelegate.swift */,
-				439F8B6B25E27DB300939DEA /* ViewController.swift */,
-				439F8B6D25E27DB300939DEA /* Main.storyboard */,
 				439F8B7025E27DB300939DEA /* Assets.xcassets */,
-				439F8B7225E27DB300939DEA /* LaunchScreen.storyboard */,
 				439F8B7525E27DB300939DEA /* Info.plist */,
+				439F8D2C25ED14B500939DEA /* RootSegue.swift */,
 			);
 			path = MapsKit;
 			sourceTree = "<group>";
@@ -146,6 +171,57 @@
 				439F8B8B25E27DB400939DEA /* Info.plist */,
 			);
 			path = MapsKitUITests;
+			sourceTree = "<group>";
+		};
+		439F8C1F25E4223400939DEA /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				439F8D5F25F0D0CA00939DEA /* RealmRepositories */,
+				439F8D5825F0D0B200939DEA /* RealmModels */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		439F8D2225ED107100939DEA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				439F8B6D25E27DB300939DEA /* Main.storyboard */,
+				439F8D0625ECF0E000939DEA /* Auth.storyboard */,
+				439F8B7225E27DB300939DEA /* LaunchScreen.storyboard */,
+				439F8D2725ED136300939DEA /* Launch.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		439F8D2325ED108C00939DEA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				439F8D1025ECF7B900939DEA /* RecoveryPasswordViewController.swift */,
+				439F8D0B25ECF6EC00939DEA /* LoginViewController.swift */,
+				439F8B6B25E27DB300939DEA /* ViewController.swift */,
+				439F8D1D25ED00B200939DEA /* MainViewController.swift */,
+				439F8D3125ED152B00939DEA /* LaunchViewController.swift */,
+				439F8D4E25ED89FE00939DEA /* RegistrationViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		439F8D5825F0D0B200939DEA /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				439F8C2025E4225A00939DEA /* LastRoute.swift */,
+				439F8D5325ED8E3400939DEA /* User.swift */,
+			);
+			path = RealmModels;
+			sourceTree = "<group>";
+		};
+		439F8D5F25F0D0CA00939DEA /* RealmRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				439F8D6025F0D0F500939DEA /* PathRepository.swift */,
+				439F8D6B25F11F3800939DEA /* UserRepositiry.swift */,
+			);
+			path = RealmRepositories;
 			sourceTree = "<group>";
 		};
 		5DF8AC097FA367D16DCF1001 /* Frameworks */ = {
@@ -183,6 +259,7 @@
 				439F8B6125E27DB300939DEA /* Frameworks */,
 				439F8B6225E27DB300939DEA /* Resources */,
 				35517764E79D72CCC950D6D2 /* [CP] Copy Pods Resources */,
+				7DA056295D619DD1C6573C69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,6 +298,7 @@
 				439F8B8225E27DB400939DEA /* Frameworks */,
 				439F8B8325E27DB400939DEA /* Resources */,
 				3F2D2413EFC1F9EA90DE690E /* [CP] Copy Pods Resources */,
+				431FC20E60A2A077D76BD8AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,9 +358,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				439F8B9B25E27DE600939DEA /* .gitignore in Resources */,
+				439F8D0725ECF0E000939DEA /* Auth.storyboard in Resources */,
 				439F8B7425E27DB300939DEA /* LaunchScreen.storyboard in Resources */,
 				439F8B7125E27DB300939DEA /* Assets.xcassets in Resources */,
 				439F8B6F25E27DB300939DEA /* Main.storyboard in Resources */,
+				439F8D2825ED136300939DEA /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +439,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		431FC20E60A2A077D76BD8AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapsKit-MapsKitUITests/Pods-MapsKit-MapsKitUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapsKit-MapsKitUITests/Pods-MapsKit-MapsKitUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapsKit-MapsKitUITests/Pods-MapsKit-MapsKitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		435EFBCF9915F18324D69AA2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +476,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DA056295D619DD1C6573C69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapsKit/Pods-MapsKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapsKit/Pods-MapsKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapsKit/Pods-MapsKit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EEE9FA5D509F70E0E506371F /* [CP] Check Pods Manifest.lock */ = {
@@ -410,9 +524,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439F8D1E25ED00B200939DEA /* MainViewController.swift in Sources */,
+				439F8D3225ED152B00939DEA /* LaunchViewController.swift in Sources */,
 				439F8B6C25E27DB300939DEA /* ViewController.swift in Sources */,
+				439F8C2125E4225A00939DEA /* LastRoute.swift in Sources */,
+				439F8D4F25ED89FE00939DEA /* RegistrationViewController.swift in Sources */,
 				439F8B6825E27DB300939DEA /* AppDelegate.swift in Sources */,
+				439F8D6C25F11F3800939DEA /* UserRepositiry.swift in Sources */,
+				439F8D6125F0D0F500939DEA /* PathRepository.swift in Sources */,
+				439F8D0C25ECF6EC00939DEA /* LoginViewController.swift in Sources */,
+				439F8D1125ECF7B900939DEA /* RecoveryPasswordViewController.swift in Sources */,
 				439F8B6A25E27DB300939DEA /* SceneDelegate.swift in Sources */,
+				439F8D2D25ED14B500939DEA /* RootSegue.swift in Sources */,
+				439F8D5425ED8E3400939DEA /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
